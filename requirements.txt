@@ -1,0 +1,39 @@
+# ----------------------------------------------------------------------
+# 1. 코어 딥러닝 및 LLM/Hugging Face 라이브러리
+# ----------------------------------------------------------------------
+# PyTorch (GPU 환경에 따라 버전 변경 필요, 아래는 예시)
+# 만약 CUDA 12.1을 사용한다면:
+# torch @ https://download.pytorch.org/whl/cu121/torch-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl
+# torchvision @ https://download.pytorch.org/whl/cu121/torchvision-0.18.0%2Bcu121-cp310-cp310-linux_x86_64.whl
+# torchaudio @ https://download.pytorch.org/whl/cu121/torchaudio-2.3.0%2Bcu121-cp310-cp310-linux_x86_64.whl
+# 
+# 일반 CPU 환경이나 Docker 환경이라면:
+torch
+torchvision
+torchaudio
+
+# Hugging Face 모델 로드 및 실행을 위한 라이브러리
+transformers
+accelerate # 대용량 모델 로드 시 필수
+sentence-transformers # 임베딩 모델 로드 (all-MiniLM-L6-v2)
+
+# ----------------------------------------------------------------------
+# 2. LangChain 및 RAG 관련 라이브러리
+# ----------------------------------------------------------------------
+# LangChain 코어 기능 (LCEL, Runnable 등)
+langchain
+langchain-core
+
+# HuggingFace, Chroma, TextLoader 등 커뮤니티 통합 모듈
+langchain-community
+
+# HuggingFace LLM 파이프라인 통합 모듈 (선택적, community에 포함될 수도 있으나 명시)
+langchain-huggingface
+
+# 텍스트 분할 (CharacterTextSplitter)
+langchain-text-splitters
+
+# ----------------------------------------------------------------------
+# 3. 벡터스토어 (ChromaDB)
+# ----------------------------------------------------------------------
+chromadb
